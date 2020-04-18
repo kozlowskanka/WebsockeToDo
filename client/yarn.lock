@@ -1153,6 +1153,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@kozlowskanka/randomid-generator@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@kozlowskanka/randomid-generator/-/randomid-generator-1.0.2.tgz#52bc99b531a8cc997beb93670ec69c9136695280"
+  integrity sha512-xfyI8GKIgNoPs0K+Vi8jpQa/l4DnFUSLmwy9F/WbOlabukZ2lE4wXWfoTM7FDaayK655qY3bfoQt5q4I4hjdmw==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
