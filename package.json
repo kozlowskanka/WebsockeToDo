@@ -1,0 +1,17 @@
+{
+  "name": "y",
+  "version": "y",
+  "description": "ToDoList",
+  "main": "app.js",
+  "repository": "git@github.com:kozlowskanka/WebsockeToDo.git",
+  "author": "Anka Kozłowska <kozlowskanka@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "socket.io": "2.2.0"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  }
+}
