@@ -3,6 +3,10 @@ import io from 'socket.io-client';
 
 class App extends React.Component {
 
+  componentDidMount() {
+    this.socket = io.connect('http://localhost:8000/');
+  }
+
   render() {
     return (
       <div className="App">
