@@ -23,10 +23,12 @@ class App extends React.Component {
     });
   }
 
-  removeTask(id) {
+  removeTask(id, fromOutside) {
     const {tasks} = this.state;
     this.setState({ tasks: tasks.filter(item => item.id !== id )});
-    this.socket.emit('removeTask', id);
+    if (fromOutside==true) {
+      this.socket.emit('removeTask', id, fromOutside);
+    }
   }
 
   submitForm(event) {
