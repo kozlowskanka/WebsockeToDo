@@ -23,11 +23,12 @@ class App extends React.Component {
     });
   }
 
-  removeTask(id, fromOutside) {
+  removeTask(id, fromHere) {
     const {tasks} = this.state;
     this.setState({ tasks: tasks.filter(item => item.id !== id )});
-    if (fromOutside==true) {
-      this.socket.emit('removeTask', id, fromOutside);
+    console.log('tasks', tasks);
+    if (fromHere == true) {
+      this.socket.emit('removeTask', id, fromHere);
     }
   }
 
@@ -69,7 +70,7 @@ class App extends React.Component {
                 {task.name}
                 <button 
                   className="btn btn--red" 
-                  onClick={() => this.removeTask(task.id)}>
+                  onClick={() => this.removeTask(task.id, true)}>
                     Remove
                 </button>
               </li>

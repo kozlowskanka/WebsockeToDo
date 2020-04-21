@@ -17,15 +17,15 @@ io.on('connection', (socket) => {
   socket.emit('updateData', tasks);
 
   socket.on('addTask', (addedTask) => {
-    console.log('Oh, I\'ve got something from ' + socket.id);
+    console.log('Oh, I\'ve got new task from ' + socket.id);
     tasks.push(addedTask);
     socket.broadcast.emit('addTask', addedTask);
   });
 
   socket.on('removeTask', (removedTask) => {
-    console.log('Oh, I\'ve got something from ' + socket.id);
+    console.log('Oh,' + socket.id + 'has removed task.');
     tasks = tasks.filter(task => task.id !== removedTask);
-    console.log('removed tasks', removedTask);
+    console.log('Removed task is', removedTask);
     socket.broadcast.emit('removeTask', removedTask);
   });
 });
